@@ -12,6 +12,7 @@ import {
   VStack,
   HStack,
 } from '@chakra-ui/react';
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BiMenuAltLeft } from 'react-icons/bi';
@@ -21,6 +22,7 @@ const Header = () => {
   return (
     <>
       <Button
+        zIndex={'overlay'}
         pos={'fixed'}
         top={'4'}
         left={'4'}
@@ -74,8 +76,10 @@ const Header = () => {
                 <Link to={'/signup'}>SignUp</Link>
               </Button>
             </HStack>
+            
           </DrawerBody>
         </DrawerContent>
+        
       </Drawer>
     </>
   );
